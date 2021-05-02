@@ -1,10 +1,6 @@
 
-        function isEven(a){
-            if(a%2==0){
-            return true;
-        }else{
-            return false;
-        }
+        function isEven(value) {
+        return value % 2 === 0;
         }
        /* alert(isEven(3))*/
 
@@ -28,13 +24,17 @@
         
        /* let s1= "football"
         let s2="foo"*/
-        function stringContains(s1,s2){
+        function stringContains(string1, string2) {
+        return string1.includes(string2);
+        }
+
+       /* function stringContains(s1,s2){
             if(s1.includes(s2)){
                 return true;
         }else{
             return false;
         }
-        }
+        }*/
         /*console.log(stringContains(s1,s2));*/
         
 
@@ -89,8 +89,9 @@
 
         
         /*let b="I love JS";*/
-        function getSlug(b){
-            return b.split(' ').join('-');
+           function getSlug(b){
+	   let lower=b.toLowerCase();
+           return lower.split(' ').join('-');
 
         }
 
