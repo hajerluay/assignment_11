@@ -24,8 +24,8 @@
         
        /* let s1= "football"
         let s2="foo"*/
-        function stringContains(string1, string2) {
-        return string1.includes(string2);
+        function stringContains(s1, s2) {
+        return s1.includes(s2);
         }
 
        /* function stringContains(s1,s2){
