@@ -96,3 +96,108 @@
         }
 
        /* console.log(getSlug(b));*/
+
+
+
+	const message = 'hello';
+foo();
+
+function foo() {
+	alert(message);
+}
+//it shows the message hello , because const in a globel scope.
+
+const message = 'hello';
+foo();
+function foo() {
+	let message = 'hi'
+	alert(message);
+}
+//it shows hi message, cause it declared and call inside block. it has local scope.
+
+foo();
+const message = 'hello';
+function foo() {
+	alert(message);
+}
+
+//it gives error caues message doesnot declare inside block , it is in the globel scope.
+
+foo();
+function foo() {
+	alert(message);
+}
+
+var message = 'hello';
+//it gives undifine cause it reachs the globel scope and doesnot find iteration of the var message.
+
+if (true) {
+	let message = 'hello';
+}
+
+alert(message);
+//it gives error cause message define inside block and calls out side it, must call in the same block(anything define inside block visible only inside that block).
+
+if (true) {
+	var message = 'hello';
+}
+
+alert(message);
+
+//it prints the message hello,var has a global scope.
+
+{
+	let message = 'hello';
+	message = 'hi';
+}
+
+alert(message);
+//gives error,anything define inside block visible only inside that block.
+
+
+let message = 'hello';
+
+{
+	message = 'hi';
+}
+
+alert(message);
+//it prints message hi cause it rechange to let message="hi".
+
+
+
+
+foo();
+
+function foo() {
+	{
+		const message = 'hello';
+	}
+	
+	alert(message);
+}
+// it give error , anything define inside block visible only inside that block. the alert must be inside the block so it works.
+
+foo();
+
+function foo() {
+	{
+		var message = 'hello';
+	}
+	
+	alert(message);
+}
+//it prints the message hello, cause var has function scope.
+
+
+foo();
+
+function foo() {
+	{
+		var message = 'hello';
+	}
+}
+
+alert(message);
+// it gives error, cause var doesnot has block scope and var message inside block, it doesnot recoginze it.
+
